@@ -7,7 +7,7 @@ const Menu = () => {
   const products = [
   {
     name: "Mutton Seekh kebab",
-    price: 120,
+    price: "420/-",
     image: "public/Food.svg",
   },
 ];
