@@ -5,7 +5,7 @@ import About_us from './Icon/About_us'
 
 const Nevbar = () => {
   return (
-    <div className=' bg-amber px-5 py-0.5 rounded-xl md:px-8 bg-white/5 backdrop-blur-xl shadow-lg text-amber-950 flex flex-row items-center justify-between sticky top-0 w-full z-50 h-18 '>
+    <div className=' bg-amber px-5 py-0.5 rounded-xl md:px-8 bg-white/5 backdrop-blur-xl shadow-lg text-nevtext flex flex-row items-center justify-between sticky top-0 w-full z-50 h-18 '>
       <Logo/>
       <Nev/>
       <About_us/>

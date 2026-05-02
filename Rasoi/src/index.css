@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@theme{
+    --color-nevtext:#DCCC8C;
+    --color-aboutBtn:#836C11;
+    --color-muttonTop:#F9D133;
+    --color-muttonDown:#39331A;
+    --font-mutton: "Jomolhari", serif;
+    --font-mutton2: "Italiana";
+}
+
+* {
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
