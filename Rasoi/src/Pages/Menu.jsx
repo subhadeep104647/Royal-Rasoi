@@ -29,6 +29,18 @@ const handleAddToCart1 = (maincoures1) => {
     console.log("Added to cart:", maincoures1);
 };
 
+const maincoures2 = [
+  {name: "Butter Naan",price: "50/-",image: "public/Food5.svg"},
+  { name: "Garlic Naan", price: "70/-", image: "public/Food6.svg" },
+  { name: "Tandoori Roti", price: "30/-", image: "public/Food7.svg" },
+  { name: "Lachha Paratha", price: "60/-", image: "public/Food8.svg" },
+  { name: "Stuffed Kulcha", price: "90/-", image: "public/Food9.svg" },
+];
+
+const handleAddToCart2 = (maincoures2) => {
+    console.log("Added to cart:", maincoures2);
+};
+
   return (
     <div>
       <div className=' flex flex-row items-center mt-5'>
@@ -60,8 +72,8 @@ const handleAddToCart1 = (maincoures1) => {
 
           {/* Button */}
           <div className="mt-4">
-            <button onClick={() => handleAddToCart1(item)}className=" bg-gradient-to-r from-aboutBtn to-nevtext font-semibold text-black px-4 py-2 rounded-lg transition duration-300">
-              <Link to="/Cart">Add to Cart</Link>
+            <button onClick={() => handleAddToCart(item)}className=" bg-gradient-to-r from-aboutBtn to-nevtext font-semibold text-black px-4 py-2 rounded-lg transition duration-300">
+              Add to Cart
             </button>
           </div>
         </div>
@@ -86,8 +98,33 @@ const handleAddToCart1 = (maincoures1) => {
 
           {/* Button */}
           <div className="mt-4">
-            <button onClick={() => handleAddToCart(item)}className=" bg-gradient-to-r from-aboutBtn to-nevtext font-semibold text-black px-4 py-2 rounded-lg transition duration-300">
-              <Link to="/Cart">Add to Cart</Link>
+            <button onClick={() => handleAddToCart1(item)}className=" bg-gradient-to-r from-aboutBtn to-nevtext font-semibold text-black px-4 py-2 rounded-lg transition duration-300">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      ))}
+    </div></div>
+
+    <div className='px-10 ml-5'><div className="flex flex-row-[repeat(auto-fit,minmax(250px,1fr))] gap-8 p-10 items-center justify-between">
+      {maincoures2.map((item, index) => (
+        <div key={index} className="bg-white/5 backdrop-blur-xl rounded-2xl text-center p-5 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl ">
+          <img
+            src={item.image}
+            alt={item.name}
+            className="w-[180px] mx-auto mb-4"
+          />
+
+          {/* Name */}
+          <h2 className="text-xl font-semibold text-nevtext">{item.name}</h2>
+
+          {/* Price */}
+          <p className=" text-lg mt-1 text-nevtext">₹{item.price}</p>
+
+          {/* Button */}
+          <div className="mt-4">
+            <button onClick={() => handleAddToCart2(item)}className=" bg-gradient-to-r from-aboutBtn to-nevtext font-semibold text-black px-4 py-2 rounded-lg transition duration-300">
+              Add to Cart
             </button>
           </div>
         </div>

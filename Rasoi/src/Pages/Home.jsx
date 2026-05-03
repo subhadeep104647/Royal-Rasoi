@@ -17,10 +17,10 @@ const Home = () => {
         </search>
       </div>
 
-      <div className=' flex flex-row gap-5'>
+      <div className=' flex flex-row gap-5 w-full'>
 
 
-        <div className='px-5 ml-10'><div className=' px-3 py-20 flex flex-col'>
+        <div className='px-5 ml-10 w-1/2'><div className=' px-3 py-20 flex flex-col w-full'>
           
           <div><h1 className='text-9xl font-mutton font-semibold bg-gradient-to-bl from-muttonTop to-muttonDown bg-clip-text text-transparent'>Mutton</h1></div>
 
@@ -39,7 +39,7 @@ const Home = () => {
 
         </div></div>
 
-        <div className=''>
+        <div className='w-1/2'>
           <img src="public/Food.svg" alt="Food" />
         </div>
 

@@ -6,8 +6,8 @@ import Menu from './Pages/Menu'
 import Contacts from './Pages/Contacts'
 import About_us from './Components/Icon/About_us'
 import Cart from './Pages/Cart'
-import Booking from './Pages/Booking'
 import Notification from './Pages/Notification'
+import Booking from './Pages/Booking'
 
 const App = () => {
   return (
