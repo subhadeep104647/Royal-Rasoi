@@ -7,6 +7,7 @@ import Contacts from './Pages/Contacts'
 import About_us from './Components/Icon/About_us'
 import Cart from './Pages/Cart'
 import Booking from './Pages/Booking'
+import Notification from './Pages/Notification'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Route path='/Booking' element={<Booking/>}/>
       <Route path='/Contacts' element={<Contacts/>}/>
       <Route path='/Cart' element={<Cart/>}/>
+      <Route path='/Notification' element={<Notification/>}/>
       <Route path='/About_us' element={<About_us/>}/>
     </Routes>
     </div>
