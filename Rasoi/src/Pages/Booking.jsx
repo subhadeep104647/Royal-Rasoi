@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { X } from 'lucide-react';
+import Booking2 from '../Components/Booking2';
 
 const Booking = () => {
 
   const [open, setOpen] = useState(false);
 
   return (
-    <>
+    <div>
     
-    {/* ====== YOUR ORIGINAL CODE (UNCHANGED) ====== */}
     <div className=' flex flex-row gap-5 w-full mt-15'>
 
         <div className='px-5 ml-10 w-1/2'>
@@ -38,10 +38,7 @@ const Booking = () => {
 
           <div className=' flex flex-row mt-35 gap-15 items-center'>
             <div>
-              <button 
-                onClick={() => setOpen(true)}
-                className=' bg-gradient-to-r from-aboutBtn to-nevtext px-10 py-2 font-semibold text-2xl rounded-2xl text-black'
-              >
+              <button onClick={() => setOpen(true)} className=' bg-gradient-to-r from-aboutBtn to-nevtext px-10 py-2 font-semibold text-2xl rounded-2xl text-black'>
                 Book Now
               </button>
             </div>
@@ -51,13 +48,12 @@ const Booking = () => {
         </div>
 
         <div className=' w-1/2  flex items-center justify-center'>
-          <img src="public/Family.svg" alt="Food" className=' w-200'/>
+          <div><Booking2/></div>
         </div>
 
       </div>
 
 
-    {/* ====== MODAL (ADDED) ====== */}
     {open && (
       <div className="fixed inset-0 backdrop-blur-md bg-black/30 flex items-center justify-center z-50">
         
@@ -99,7 +95,7 @@ const Booking = () => {
       </div>
     )}
 
-    </>
+    </div>
   )
 }
 
