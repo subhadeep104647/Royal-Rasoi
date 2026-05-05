@@ -1,102 +1,85 @@
-import React, { useState } from 'react'
-import { X } from 'lucide-react';
-import Booking2 from '../Components/Booking2';
+import { Calendar, Clock, Users } from "lucide-react";
 
-const Booking = () => {
-
-  const [open, setOpen] = useState(false);
-
+export default function BookingPage() {
   return (
-    <div>
+    <div className=" text-white px-6 py-12">
+
     
-    <div className=' flex flex-row gap-5 w-full mt-15'>
-
-        <div className='px-5 ml-10 w-1/2'>
-          <div className=' px-3 py-20 flex flex-col w-full'>
-          
-          <div>
-            <h1 className='text-6xl font-mutton font-semibold bg-gradient-to-bl from-muttonTop to-muttonDown bg-clip-text text-transparent'>
-              Turn this holy day into
-            </h1>
-          </div>
-
-          <div>
-            <h1 className='text-6xl font-mutton font-semibold bg-gradient-to-bl from-muttonTop to-muttonDown bg-clip-text text-transparent'>
-              beautiful family
-            </h1>
-          </div>
-
-          <div>
-            <h1 className='text-6xl font-mutton font-semibold bg-gradient-to-bl from-muttonTop to-muttonDown bg-clip-text text-transparent'>
-              memories with us.
-            </h1>
-          </div>
-
-          <div>
-            <h1 className=' text-nevtext font-thin font-mutton2 text-6xl mt-2'></h1>
-          </div>
-
-          <div className=' flex flex-row mt-35 gap-15 items-center'>
-            <div>
-              <button onClick={() => setOpen(true)} className=' bg-gradient-to-r from-aboutBtn to-nevtext px-10 py-2 font-semibold text-2xl rounded-2xl text-black'>
-                Book Now
-              </button>
-            </div>
-          </div>
-
-        </div>
-        </div>
-
-        <div className=' w-1/2  flex items-center justify-center'>
-          <div><Booking2/></div>
-        </div>
-
+      <div className="text-center mb-12">
+        <h1 className="text-5xl font-bold bg-gradient-to-bl from-muttonTop to-muttonDown bg-clip-text text-transparent tracking-wide"> Book a Table</h1>
+        <p className="text-gray-300 mt-3"> Turn this holy day into beautiful family memories with us.</p>
       </div>
 
+      
+      <div className="max-w-5xl mx-auto bg-white/5 backdrop-blur-lg rounded-2xl p-10 shadow-lg border border-white/10">
 
-    {open && (
-      <div className="fixed inset-0 backdrop-blur-md bg-black/30 flex items-center justify-center z-50">
+        <form className="grid md:grid-cols-2 gap-6">
+
+          
+          <div>
+            <label className="text-sm text-gray-300">Full Name</label>
+            <input type="text" placeholder="Enter your name" className="w-full mt-2 px-4 py-3 bg-black/40 border border-gray-600 rounded-lg focus:outline-none focus:border-[#e6c77e]"/>
+          </div>
+
+          
+          <div>
+            <label className="text-sm text-gray-300">Phone Number</label>
+            <input type="tel" placeholder="+91 XXXXX XXXXX" className="w-full mt-2 px-4 py-3 bg-black/40 border border-gray-600 rounded-lg focus:outline-none focus:border-[#e6c77e]"/>
+          </div>
+
+          
+          <div className="relative">
+            <label className="text-sm text-gray-300">Date</label>
+            <Calendar className="absolute right-4 top-11 text-[#e6c77e]" />
+            <input type="date" className="w-full mt-2 px-4 py-3 bg-black/40 border border-gray-600 rounded-lg focus:outline-none focus:border-[#e6c77e]"/>
+          </div>
+
+          
+          <div className="relative">
+            <label className="text-sm text-gray-300">Time</label>
+            <Clock className="absolute right-4 top-11 text-[#e6c77e]" />
+            <input type="time" className="w-full mt-2 px-4 py-3 bg-black/40 border border-gray-600 rounded-lg focus:outline-none focus:border-[#e6c77e]" />
+          </div>
+
+          
+          <div className="relative">
+            <label className="text-sm text-gray-300">Guests</label>
+            <Users className="absolute right-4 top-11 text-[#e6c77e]" />
+            <select className="w-full mt-2 px-4 py-3 bg-black/40 border border-gray-600 rounded-lg focus:outline-none focus:border-[#e6c77e]">
+              <option>1 Person</option>
+              <option>2 People</option>
+              <option>3 People</option>
+              <option>4 People</option>
+              <option>5+ People</option>
+            </select>
+          </div>
+
+          
+          <div>
+            <label className="text-sm text-gray-300">Occasion</label>
+            <select className="w-full mt-2 px-4 py-3 bg-black/40 border border-gray-600 rounded-lg focus:outline-none focus:border-[#e6c77e]">
+              <option>Casual Dining</option>
+              <option>Birthday</option>
+              <option>Anniversary</option>
+              <option>Business Meeting</option>
+            </select>
+          </div>
+
         
-        <div className="md:px-8 bg-white/5 backdrop-blur-xl rounded-2xl p-6 w-[700px] shadow-2xl relative animate-fadeIn">
-          
-          <div className=' flex flex-row items-center justify-between'>
-
-            <div><img src="public/Logo.svg" alt="" className='w-20' /></div>
-            <div><h2 className="text-4xl font-bold mb-4 text-center font-mutton font-semibold bg-gradient-to-bl from-muttonTop to-muttonDown bg-clip-text text-transparent">Book a Table</h2></div>
-          
-            <div><button onClick={() => setOpen(false)}className="absolute top-2 right-3 text-nevtext hover:text-aboutBtn text-xl"><X /></button></div>
+          <div className="md:col-span-2">
+            <label className="text-sm text-gray-300">Special Request</label>
+            <textarea rows="4" placeholder="Any special arrangements..." className="w-full mt-2 px-4 py-3 bg-black/40 border border-gray-600 rounded-lg focus:outline-none focus:border-[#e6c77e]"/>
           </div>
 
-          <form className="space-y-3">
+          
+          <div className="md:col-span-2 flex items-center justify-center">
+            <button type="submit" className="w-100 py-3 rounded-lg bg-gradient-to-r from-[#e6c77e] to-[#c2a96a] text-black font-semibold hover:opacity-90 transition duration-300 shadow-md">
+              Confirm Booking
+            </button>
+          </div>
 
-            <div className='w-full flex flex-row gap-2 '>
-              <div className='w-1/2 '><input type="text"placeholder="Your Name"className="w-full border-2 p-2 rounded-lg text-nevtext font-sans font-semibold text-lg tracking-wide"/></div>
-
-              <div className='w-1/2 '><input type="text"placeholder="Your Mail ID"className="w-full border-2 p-2 rounded-lg text-nevtext font-sans font-semibold text-lg tracking-wide"/></div>
-            </div>
-
-            <div className='w-full flex flex-row gap-2 '>
-              <div className='w-1/2 '><input type="text"placeholder="Contact Number"className="w-full border-2 p-2 rounded-lg text-nevtext font-sans font-semibold text-lg tracking-wide"/></div>
-
-              <div className='w-1/2 '><input type="text"placeholder="Purpose"className="w-full border-2 p-2 rounded-lg text-nevtext font-sans font-semibold text-lg tracking-wide"/></div>
-            </div>
-
-            <div className='w-full flex flex-row gap-2'>
-              <div className='w-1/3'><input type="date"className="w-full border-2 p-2 rounded-lg text-nevtext font-sans font-semibold text-lg tracking-wide"/></div>
-              <div className='w-1/3'><input type="time" placeholder="Time" className="w-full border-2 p-2 rounded-lg text-nevtext font-sans font-semibold text-lg tracking-wide" /></div>
-              <div className='w-1/3'><input type="text" placeholder="Guests"className="w-full border-2 p-2 rounded-lg text-nevtext font-sans font-semibold text-lg tracking-wide"/></div>
-            </div>
-
-            <textarea placeholder='Massage . . . . .' className='w-full border-2 p-2 rounded-lg  text-nevtext font-sans font-semibold text-lg tracking-wide' />
-
-            <div className=' flex items-center justify-center'><button className="bg-gradient-to-r from-aboutBtn to-nevtext px-10 py-2 font-semibold text-2xl rounded-2xl text-black">Confirm Booking</button></div>
-          </form>
-        </div>
+        </form>
       </div>
-    )}
-
     </div>
-  )
+  );
 }
-
-export default Booking

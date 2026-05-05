@@ -41,10 +41,10 @@ export default function Booking() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const inventory = [
-    {title: "iOS 18",image: "public/Family.svg", width: "800"},
-    {title: "AirPods 4",image: "public/Family2.svg",width: "600"},
-    {title: "Family2", image:"public/Family3.svg"},
-    {title: "Family3", image:"public/Family4.svg", width:"800" }
+    {title: "iOS 18",image: "public/Services1.svg", width: "700"},
+    {title: "AirPods 4",image: "public/Services2.svg",width: "500"},
+    {title: "Family2", image:"public/Services3.svg", width: "400"},
+    {title: "Family3", image:"public/Services4.svg", width:"700" }
     
   ];
 

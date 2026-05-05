@@ -8,6 +8,7 @@ import About_us from './Components/Icon/About_us'
 import Cart from './Pages/Cart'
 import Notification from './Pages/Notification'
 import Booking from './Pages/Booking'
+import About from './Pages/About'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Route path='/Cart' element={<Cart/>}/>
       <Route path='/Notification' element={<Notification/>}/>
       <Route path='/About_us' element={<About_us/>}/>
+      <Route path='/About' element={<About/>}/>
     </Routes>
     </div>
   )
